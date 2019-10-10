@@ -1,0 +1,470 @@
+/*reset css*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+ol, ul {
+    list-style: none;
+}
+
+/*common css */
+body {
+font-family: "Trebuchet MS","Lucida Sans" ,"Roboto", "Verdana","Century Gothic", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important ;
+overflow: hidden;
+font-size:1em;
+}
+.container{
+    margin: 0 auto;
+    width:100%;
+    max-width: 1224px;
+
+}
+.show{
+    display:block
+}
+.fLeft{
+    float:left !important
+}
+.fRight{
+    float:right !important
+}
+
+/*tab css
+.tabsMenu {
+    width: 100%;
+    height: 40px;
+    float: left;
+    clear: both;
+    border:1px solid #ddd
+}
+.tabsMenu li {
+    height: 30px;
+    line-height: 38px;
+    float: left;
+    margin-right: 10px;
+}
+
+.tabsMenu li.current {
+    position: relative;
+    background-color: #fff;
+    z-index: 5;
+}
+
+.tabsMenu li a {
+    padding: 10px;
+    text-transform: uppercase;
+    color: #333;
+    text-decoration: none;
+}
+.tabsMenu .current a {
+    color: #2e7da3;
+}*/
+.tab {
+    border: 1px solid #d4d4d1;
+    background-color: #fff;
+    float: left;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.tabContent {
+    padding: 0;
+    display: block;
+}
+#tab2 {
+ display: block;
+}
+#repairPersoninput{
+  width: 100%!important;
+}
+/*form elements css*/
+input[type="text"],input[type="number"],select ,input[list],input[type="tel"]{
+  margin: 0;
+  font-size: 0.9em;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  padding: 8px 4px;
+  width:100px;
+  border-style:solid !important;
+  /*Sridevi-13 july 2017 -Changed the border to look more good as discusses with Biswa.*/
+  border-color: rgb(149, 152, 152) !important;
+  border-width:1px !important;
+  font-family: "Trebuchet MS","Lucida Sans" ,"Roboto", "Verdana","Century Gothic", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important ;
+  border-radius: 3px;
+}
+
+.w70{
+  width: 65% !important;
+}
+
+
+input[type="date"]{
+  margin: 0;
+  font-size: 0.8em;
+  appearance: none;
+  box-shadow: none;
+  padding:2px;
+  border-radius: none;
+  width:145px;
+  border-style:solid !important;
+  border-color: black !important;
+  border-width:1px !important;
+  font-family: "Trebuchet MS","Lucida Sans" ,"Roboto", "Verdana","Century Gothic", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important ;
+  border-radius: 2px;
+}
+input[type="text"]:focus,input[type="number"]:focus,input[type="date"]:focus{
+  outline: none;
+}
+input[type="button"], button{
+   background-color: #333 ;
+      border: none;
+      color: white;
+      padding: 10px 12px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 0.7em ;
+      cursor: pointer;
+      position: relative;
+      /* top: -5px; */
+      float: right;
+      right: 7px;
+      font-family: "Trebuchet MS","Lucida Sans" ,"Roboto", "Verdana","Century Gothic", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important ;
+
+}
+.repairPersonLabel{
+  margin-top: 15px;
+}
+/*readonly css*/
+input[readonly]
+{
+    border:0;
+    border-style:none !important;
+    border-color: none !important;
+    border-width:none !important;
+}
+input[readonly="readonly"]
+{
+    border:0;
+    border-style:none !important;
+    border-color: none !important;
+    border-width:none !important;
+}
+
+
+.chkRepairDesc{
+  width: 25px;
+  height: 25px;
+}
+
+.backGroundBlue{
+  color: #33aee3;
+}
+
+.backGroundGrey{
+  color:darkgray;
+}
+
+/*
+.chkRepairDesc {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  margin: 20px auto;
+  background: #fcfff4;
+  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+  label {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    background: linear-gradient(top, #222 0%, #45484d 100%);
+    border-radius: 50px;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+    &:after {
+      content: '';
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      background: $activeColor;
+      background: linear-gradient(top, $activeColor 0%, $darkenColor 100%);
+      opacity: 0;
+      border-radius: 50px;
+      box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    }
+    &:hover::after {
+      opacity: 0.3;
+    }
+  }
+  input[type=checkbox] {
+    visibility: hidden;
+    &:checked + label:after {
+      opacity: 1;
+    }
+  }
+}*/
+/*loader css*/
+.ajaxLoader {
+    width: inherit;
+    cursor: wait;
+    background:#ffffff url('../../Images/ajax-loader.gif') no-repeat center center;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+    position: absolute;
+    z-index: 99 ;
+    display: block
+}
+
+/*logo css*/
+.logo{
+    background:#ffffff url('../../Images/CB.png') no-repeat center center;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+header{
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ffffff;
+}
+
+/*
+input[type=radio] {
+		display:none;
+	}
+
+	input[type=radio] + label {
+		display:inline-block;
+		margin:-2px;
+		padding: 4px 12px;
+		margin-bottom: 0;
+		font-size: 14px;
+		line-height: 20px;
+		color: #333;
+		text-align: center;
+		text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+		vertical-align: middle;
+		cursor: pointer;
+		background-color: #f5f5f5;
+		background-image: -moz-linear-gradient(top,#fff,#e6e6e6);
+		background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
+		background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+		background-image: -o-linear-gradient(top,#fff,#e6e6e6);
+		background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+		background-repeat: repeat-x;
+		border: 1px solid #ccc;
+		border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+		border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+		border-bottom-color: #b3b3b3;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+		filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+		-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	}
+
+	input[type=radio]:checked + label {
+		   background-image: none;
+		outline: 0;
+		-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+		-moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+		box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0 ,0.05);
+			background-color:#e0e0e0;
+	}
+
+
+.scan-input input { border:none: background:#fff; display:block; box-sizing: border-box }
+.scan-input img { position: absolute; top: 2px; right: 5px }
+
+.scan-input { position: relative; }
+*/
+
+
+.txtSKU{
+  /*background-image: url("../../Images/images.ico");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;*/
+  margin-right: -1% !important;
+  width: 57% !important;
+}
+
+
+.imgBarCode{
+      position: relative;       
+      
+}
+.bcCR{
+  width: 45px;
+  height: 30px;
+  top: 4px;
+}
+.bcSR{
+  position: relative;  
+  top: 9px ;
+  width: 45px;
+  height: 30px;  
+}
+.imgDropDown{
+  position: relative;
+  top: 5px;
+  right: 24px;
+  width: 15px;
+  height: 20px;
+}
+
+
+/*START- Radio button CSS changes .. Owner- Sridevi. Date- 16 May 2017*/
+
+
+/*tab css*/
+.tabsMenu {
+  width: 100%;
+  height: 40px;
+  float: left;
+  clear: both;
+  margin-bottom: -5px;
+}
+.tabsMenu li label{
+    height: 36px;
+    line-height: 32px;
+    float: left;
+    display: inline-block;
+    margin-right: -1px;
+    background: #e0e0e0;
+    -moz-box-shadow: 1px 1px 2px #ccc;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+
+}
+
+.tabsMenu li.current label {
+    color: black !important;
+    outline: none;
+    background: #ffffff;
+    pointer-events: none;
+    cursor: default;
+}
+
+.tabsMenu li label{
+    color: #807d7d;
+    width: 50%!important;
+    text-align: center!important;
+}
+.tabsMenu .current label
+{
+color: #2e7da3;
+}
+
+.tabsMenu label input[type="radio"] {
+  display: none;
+}
+
+.tabsMenu label {
+  background-color: white;
+  padding: 2px 11px;
+}
+
+.tabsMenu input[type="radio"]:checked+label {
+  background-color: #bbb;
+}
+
+/*END Radio button CSS changes .. Owner- Sridevi. Date- 16 May 2017*/
+
+
+.radioGroup{
+  border-bottom: 3px solid grey;
+  font-weight: bolder;
+}
+
+
+.floatRight{
+  float: right !important;
+}
+
+
+.btnSearch{
+      /*border: none !important;
+      color: white !important;
+      text-align: center !important;
+      text-decoration: none !important;
+      display: inline-block !important;
+      font-size: 0.9em  !important;
+      cursor: pointer !important;
+      position: relative !important;
+      float: right !important;
+      top: 30px !important;
+      right: 10px !important;
+      width: 80px !important;
+      background:#ffffff url('../../Images/search.png') no-repeat center center;*/
+      margin-left: 16px;
+}
+
+.common{
+  /*  width: 100px !important;*/
+}
+
+.width95{
+    width: 95% !important;
+}
+
+.centerCommonClass{
+  text-align: center;
+  margin-top: 10px;
+    margin-bottom: 2px;
+  padding: 0.3em;
+  box-sizing: border-box;
+}
+
+.mBottom{
+    margin-bottom: 20px;
+}
+.mTop{
+    margin-top: 10px;
+}
+
+.hover { background-color:#ddd }
+.clicked { background-color:#999 }
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+}
+
+.disableSpan{
+  pointer-events: none;
+  cursor: default;
+}
+ .vAlignSuper{
+   vertical-align: super;
+ }
+.padLeft2{
+  padding-left: 4px;
+}
+.pLeft{
+  padding-left: 2px;
+}
+.pLeft2em{
+  padding-left: 2em !important;
+}
+
+
+.groupEvents button{
+  padding: 10px 6px !important;
+  font-size: 0.7em;
+}

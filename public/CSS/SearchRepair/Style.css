@@ -1,0 +1,233 @@
+
+.searchRepairScreen{
+  border: 1px solid #d4d4d1;
+  background-color: #fff;
+  float: left;
+  margin-bottom: 10px;
+  width: 100%;
+}
+input{
+  margin-top: 5px;
+}
+.inner-div{
+  width:100%;
+ height: 725px;
+  border: 1px solid grey;
+}
+.cell4{
+background-color: #b9b9b9;
+color: white;
+text-align: center;
+}
+h3{
+  margin: 0;
+}
+.divSearchResults1{
+  height: 24px;
+
+}
+.divSearchResults2{
+  height: 700px;
+  overflow-y:scroll!important;
+}
+
+.centerClass{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0.3em;
+  box-sizing: border-box;
+}
+
+.leftClass{
+    text-align: left;
+}
+
+
+ .searchRepaiRight .col-6, .searchRepairLeft .col-6, .searchRepaiRight .col-m-6, .searchRepairLeft .col-m-6,.searchRepaiRight .col-6, .searchRepairLeft .col-6, .searchRepaiRight .col-m-6, .searchRepairLeft .col-m-6,  .searchRepaiRight .sku, .searchRepairLeft .sku {
+    display:flex;
+    align-items: center;
+    padding: 0.5em;
+    box-sizing: border-box
+}
+.searchRepaiRight label,.searchRepairLeft label{
+    display: inline-flex;
+}
+ .searchRepaiRight .fl > label, .searchRepairLeft .fl > label{
+    width: 35%;
+}
+ .searchRepaiRight .fr > label, .searchRepairLeft .fr > label{
+    width: 30%;
+}
+
+.searchRepairLeft{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+
+.fLeftData > label{
+  width: 40%;
+}
+.fRightData > label{
+  width: 30%;
+}
+
+.repairPersonLabel{
+  margin-top: 15px;
+}
+
+/*START- Radio button CSS changes .. Owner- Sridevi. Date- 16 May 2017*/
+
+.tabsMenu label input[type="radio"] {
+  display: none;
+}
+
+.tabsMenu label {
+  display: inline-block;
+  background-color: white;
+  padding: 2px 11px;
+  cursor: pointer;
+}
+
+.tabsMenu input[type="radio"]:checked+label {
+  background-color: #bbb;
+}
+
+.rowData{
+  border-bottom: 1px solid #ddd !important;
+}
+/*Added By Sridevi-- Date-17 May 2017*/
+/* Modified by Biswa -- Date 1 June 2017 */
+.searchRepairDetail .col-12,.searchRepairDetail .col-m-12,.searchRepairDetail .sku{
+  display: flex;
+  align-items: center;
+  padding-left: 0.5em;
+  box-sizing: border-box;
+  padding-top: 1.5em;
+  padding-bottom: 0.8em;
+  padding-right: 0.5em;
+}
+.searchRepairDetail label{
+    display: inline-flex;
+}
+.searchRepairDetail .fl > label{
+    width: 42%;
+}
+.searchRepairDetail .fr > label{
+    width: 30%;
+}
+
+.searchRepairDetail{
+/*    font-size: 0.9em !important;*/
+
+}
+.searchRepairRow{
+  padding-top: 0.5em !important;
+}
+.searchRepairLbl{
+  padding-top: 0.5em;
+}
+/*END*/
+
+.div1{
+  width: 46px;
+}
+.div2{
+  width: 56px;
+}
+.div3
+{
+  width: 62px;
+}
+.div4{
+    width: 5%;
+}
+
+.divSearch{
+/*  margin-top: 25px !important;
+      margin-bottom: 25px;*/
+
+}
+
+ .padsLeft{
+   padding-left: 1.1em !important;
+ }
+
+
+#datepicker{
+  width: 70% !important;
+}
+
+#repairPersonsDiv .col-12,#repairPersonsDiv .col-m-12,#repairPersonsDiv .sku{
+  display: flex;
+  align-items: center;
+  padding: 0 !important;
+}
+
+#repairPersonsSRDiv .col-12,#repairPersonsSRDiv .col-m-12,#repairPersonsSRDiv .sku{
+  display: flex;
+  align-items: center;
+  padding: 0 !important;
+}
+
+.emCls{
+  padding: 0.9em 0.1em !important;
+}
+
+.btnCancelRepair{
+  text-align: center;
+  /* right: 25% !important; */
+  float: right;
+  right: 0 !important;
+}
+
+
+.searchRow{
+  cursor: pointer;
+  height: 60px;
+}
+.status-select-box{
+  /* margin-left: 3px !important; */
+  display: inline-flex;
+  /* margin: 0.3em; */
+  border: 1px solid #959898;
+  border-radius: 3px;
+  height: 37px;
+  padding: 0px 4px;
+  text-overflow: clip;
+  font-size: 14px;
+  text-align: left;
+  line-height: 39px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #ffffff;
+  /* pointer-events: none; */
+  white-space: nowrap;
+  cursor: pointer;
+  width: 69.2%;
+}
+
+
+.statusOptions{
+  border-bottom: 1px solid lightgrey;
+  cursor: pointer;
+  pointer-events: auto;
+  padding-left: 15px;
+}
+
+.statusContentDiv{
+/*  overflow-y: scroll;*/
+  cursor: pointer;
+  font-size: 1em;  
+  height: 83%;  
+  overflow-y: scroll;
+  border: 1px solid #b5b3b3;
+  margin: 5px;
+
+}
+
+.inpSRSKU{ 
+  font-weight: bold;
+}

@@ -1,0 +1,64 @@
+{
+  "PRCOMPANY": 100,
+  "PRFILENAME": "SCVALREF",
+  "PSTATUSCODE": 200,
+  "PCOUNT": 8,
+  "PCONTROLEDS": [
+    {
+      "VALUETYPE": "SHOPREPAIRSTATUS",
+      "VALUEDETAIL": "010",
+      "ABBRDESCRIPTION": "",
+      "SHORTDESCRIPTION": "NEW",
+      "LONGDESCRIPTION": "New Repair"
+    },
+    {
+      "VALUETYPE": "SHOPREPAIRSTATUS",
+      "VALUEDETAIL": "050",
+      "ABBRDESCRIPTION": "",
+      "SHORTDESCRIPTION": "NOC",
+      "LONGDESCRIPTION": "No Chg Rpr"
+    },
+    {
+      "VALUETYPE": "SHOPREPAIRSTATUS",
+      "VALUEDETAIL": "100",
+      "ABBRDESCRIPTION": "",
+      "SHORTDESCRIPTION": "OPN",
+      "LONGDESCRIPTION": "Open"
+    },
+    {
+      "VALUETYPE": "SHOPREPAIRSTATUS",
+      "VALUEDETAIL": "150",
+      "ABBRDESCRIPTION": "",
+      "SHORTDESCRIPTION": "RVW",
+      "LONGDESCRIPTION": "Reviewed              (Just on the screen. This value will not be found in database as reviewed is still open and needs approval)"
+    },
+    {
+      "VALUETYPE": "SHOPREPAIRSTATUS",
+      "VALUEDETAIL": "300",
+      "ABBRDESCRIPTION": "",
+      "SHORTDESCRIPTION": "APP",
+      "LONGDESCRIPTION": "Approved"
+    },
+    {
+      "VALUETYPE": "SHOPREPAIRSTATUS",
+      "VALUEDETAIL": "500",
+      "ABBRDESCRIPTION": "",
+      "SHORTDESCRIPTION": "CLO",
+      "LONGDESCRIPTION": "Closed"
+    },
+    {
+      "VALUETYPE": "SHOPREPAIRSTATUS",
+      "VALUEDETAIL": "800",
+      "ABBRDESCRIPTION": "",
+      "SHORTDESCRIPTION": "REJ",
+      "LONGDESCRIPTION": "Rejected"
+    },
+    {
+      "VALUETYPE": "SHOPREPAIRSTATUS",
+      "VALUEDETAIL": "900",
+      "ABBRDESCRIPTION": "",
+      "SHORTDESCRIPTION": "CNL",
+      "LONGDESCRIPTION": "Cancelled"
+    }
+  ]
+}

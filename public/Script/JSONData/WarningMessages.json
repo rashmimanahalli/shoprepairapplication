@@ -1,0 +1,13 @@
+{  "WarningMessages" :[
+            { "Title" : "PieceCount" , "Message" : "Piece Count needs to be entered." },
+            { "Title" : "RepairPerson" , "Message" : "Repair Person needs to be selected." },
+            { "Title" : "RewrapItem" , "Message" : "Rewrap Item is unchecked. Kindly check." },
+            { "Title" : "SKU" , "Message" : "Entered SKU is invalid. Kindly enter a new SKU." },
+            { "Title" : "InvalidSourceLocation" , "Message" : "Invalid Source Location. Kindly enter a new Source Location." , "Code" : "901"	  } ,
+            { "Title" : "InvalidSalenumberorSuffix" , "Message" : "Invalid Sale number or Suffix. Kindly enter a valid Sale Number" , "Code" : "902"	  } ,
+            { "Title" : "SKUnotFound" , "Message" : "SKU is not found in the Sale # entered." , "Code" : "903"	  } ,
+            { "Title" : "EmptySaleNumber" , "Message" : "Sale Number must be entered" , "Code" : "904"	  } ,
+            { "Title" : "InvalidPO" , "Message" : "Invalid Purchase Order #. Kindly enter a valid Purchase Order #." , "Code" : "906"	  } ,
+            { "Title" : "InvalidPOforSKU" , "Message" : "Purchase Order given does not contain the SKU entered. Kindly enter a new PO." , "Code" : "907"	  }
+          ]
+}

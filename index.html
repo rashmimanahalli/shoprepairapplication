@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Shop Repair Pictures- v2</title>
+   <link rel="shortcut icon" href="./public/Images/cb.ico" />
+
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+   <!--CSS for Main Layout Screen-->
+   <link rel="stylesheet" type="text/css" href="./public/CSS/Site/Style.css">
+   <link rel="stylesheet" type="text/css" href="./public/CSS/Site/Common.css">
+   <link rel="stylesheet" type="text/css" href="./public/CSS/Site/Responsive.css">
+   <!--CSS for Create Repair Screen-->
+   <link rel="stylesheet" type="text/css" href="./public/CSS/CreateRepair/Style.css">
+   <!--CSS for Repair Details Screen-->
+   <link rel="stylesheet" type="text/css" href="./public/CSS/RepairDetails/Style.css">
+   <!--CSS for Search Repair Screen-->
+   <link rel="stylesheet" type="text/css" href="./public/CSS/SearchRepair/Style.css">
+   <!--CSS for modal Dialog -->
+   <link rel="stylesheet" type="text/css" href="./public/CSS/Site/modalDialog.css">
+   <!--CSS for Date Picker-->
+   <link rel="stylesheet" type="text/css" href="./public/CSS/datePicker/datePicker.css">
+   <!--CSS for Font Awesome-->
+   <link rel="stylesheet" type="text/css" href="./public/CSS/Site/font-awesome.min.css">
+   <!--<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
+
+</head>
+
+<body>
+   <div class="container hide">
+      <header>
+         <img src="./public/Images/WebsiteHeaderLogo.jpg" style="width: 200px;margin-left: auto;margin-right: auto;margin-top: 10px;margin-bottom: 10px;">
+         <img src="./public/Images/logo_CANCB2.png" style="width:auto; margin-left:auto; margin-right:auto;">
+         <!-- <span class="brandNames" style="display:block;"> 
+            <img src="./public/Images/logo_CB.png" style="width:auto; margin-left:auto; margin-right:auto;">
+            <img src="./public/Images/logo_CANCB2.png" style="width:auto; margin-left:auto; margin-right:auto;"> -->
+         <!-- </span> -->
+         <h2>Shop Repairs</h2>
+      </header>
+      <!--tab-->
+      <div id="tabsContainer" class="col-12 col-m-12">
+         <!--tab menu-->
+         <ul class="tabsMenu">
+            <li class="current" id="crBC">
+               <label name="span" rtyu="Create" class="radioGroup" id="lblCSP">
+                  Create
+               </label>
+            </li>
+            <!--<a href=""><input type="radio" name="span" rtyu="Search" class="radioGroup" >-->
+            <li id="srBC">
+               <label name="span" rtyu="Search" class="radioGroup" id="lblSSP">
+                  Search
+                  <!--</a>-->
+               </label>
+            </li>
+         </ul>
+         <!-- 
+         <div class="tab">
+         </div> -->
+
+         <!--START: for Create Repair Screen-->
+         <div class="createRepairScreen">
+            <div class="tabContent">
+               <div class="skuDetail createDetail">
+                  <div class="col-12 col-m-12 ">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label class="searchRepairLbl ">Location</label></div>
+                        <div class="col-7 col-m-7"><strong><label class="lblLocation searchRepairLbl"></label></strong></div>
+
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+                        <div class="col-5 col-m-5"><label class="searchRepairLbl ">Date</label></div>
+                        <div class="col-7 col-m-7"><strong><label class="lblDate searchRepairLbl"></label></strong></div>
+                     </div>
+                  </div>
+                  <div class="col-12 col-m-12 hide repairDiv">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label>Repair #</label></div>
+                        <div class="col-7 col-m-7"><strong><label class="lblRepairNumber"></label></strong></div>
+
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+                        <div class="col-5 col-m-5"><label>Status</label></div>
+                        <div class="col-7 col-m-7"><strong><label class="lblStatus" code=""></label></strong></div>
+                     </div>
+                  </div>
+                  <div class="col-12 col-m-12 skuCRdiv">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label class="searchRepairLbl">SKU #</label></div>
+                        <div class="col-7 col-m-7"><input type="tel" class="txtSKU focus_cls" maxlength="6" pattern="^[0-9]"
+                              placeholder="Enter SKU" desc="" com="" autocomplete="off" />
+                           <img src="../public/Images/ic-barcode.png" class="imgBarCode bcCR" kahan-se="create"
+                              kaunsa-type="sku" data-for="txtSKU" />
+                        </div>
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+                        <div class="col-5 col-m-5"><label class="searchRepairLbl"># of Pieces</label></div>
+                        <div class="col-7 col-m-7"><input type="tel" name="pieceCount" value="1" class="txtPC focus_cls w90"
+                              maxlength="3" pattern="\d*" step="1" autocomplete="off" tempval="1" /></div>
+                     </div>
+                  </div>
+                  <!-- <div class="col-12 col-m-12 hide skuSRDiv">
+                     <div class="col-3 col-m-3 wadjust"><label class="searchRepairLbl">SKU #</label></div>
+                     <div class="col-9 col-m-9">
+                        <strong>
+                           <input type="tel" class="inpSRSKU" maxlength="6" pattern="^[0-9]" readonly />
+                           <label class="lblSRSKUDesc" readonly></label>
+                        </strong>
+                     </div>
+                  </div> -->
+                  <div class="col-12 col-m-12 hide skuSRDiv">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label class="searchRepairLbl">SKU #</label></div>
+                        <div class="col-7 col-m-7">
+                           <input type="tel" class="inpSRSKU w654" maxlength="6" pattern="^[0-9]" readonly />
+                           <strong>
+                           <label class="lblSRSKUDesc searchRepairLbl" readonly></label>
+                        </strong>
+                        </div>
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+                        <div class="col-5 col-m-5"><label class="searchRepairLbl"># of Pieces</label></div>
+                        <div class="col-7 col-m-7"><input type="tel" name="pieceCount" value="1" class="txtPCSR focus_cls w90"
+                              maxlength="3" pattern="\d*" step="1" autocomplete="off" tempval="1"/></div>
+
+                     </div>
+                  </div>
+                  <div class="col-12 col-m-12 hide minutesSRDiv">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label class="searchRepairLbl">Minutes</label></div>
+                        <div class="col-7 col-m-7"><strong><label class="lblMinutes searchRepairLbl"></label></strong>
+                        </div>
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+
+                     </div>
+                  </div>
+                  <div class="col-12 col-m-12">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label class="searchRepairLbl">Repair Person</label></div>
+                        <div class="col-7 col-m-7 srRepairRow hide">
+                           <label class="cust-select-box focus_cls w654" id="rPersonPopupInputSR1" repairpersonid="0"
+                              valcode="" style="white-space:nowrap" disabled>Select Repair Person</label>
+                           <div class="repairPersonsMainDivSR1 hide">
+                              <div class="repairPersonsTxtDiv">
+                                 <input type='text' id='repairPersoninputSR1' repairPersonID='' placeholder='Select Repair Person'
+                                    class="repairPersoninput" autocomplete="off" />
+                              </div>
+                              <!--<button class="close" id="btnCloseAlert">X</button>-->
+                              <div id="repairPersonsDivSR1">
+
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-7 col-m-7 crRepairRow">
+                           <!--<input type="button" class="cust-select-box focus_cls" id="rPersonPopupInputCR" valcode="" disabled>Select Repair Person</input>-->
+                           <label class="cust-select-box focus_cls w654" id="rPersonPopupInputCR" valcode=""
+                              repairpersonid="0" disabled>Repair Person</label>
+                           <div class="repairPersonsMainDiv focus_cls hide">
+                              <div class="repairPersonsTxtDiv">
+                                 <input type='text' id='repairPersoninput' repairPersonID='' placeholder='Select Repair Person'
+                                    class="repairPersoninput" autocomplete="off" />
+                              </div>
+
+                              <div id="repairPersonsDivCR">
+
+                              </div>
+                           </div>
+                           <!--  <div class="tempMsg"></div>-->
+                        </div>
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+                           <div class="col-6 col-m-6 font9em"><input type="radio" name="rewrap" dname="vendorWrap" value="" class="chkRItem "
+                              disabled checked="checked" /><span class="rTypes">Pre Delivery</span></div>
+                        <div class="col-6 col-m-6 font9em"><input type="radio" name="rewrap" dname="rewrap" value="" class="chkRItem "
+                              disabled /><span class="rTypes">Post Delivery</span></div>
+                  
+                     </div>
+                  </div>
+                  <div class="col-12 col-m-12">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label class="searchRepairLbl">PO#</label></div>
+                        <div class="col-7 col-m-7"><input type="tel" name="sku" value="" class="txtPONum focus_cls w654"
+                              maxlength="7" pattern="\d*" step="1" disabled placeholder="Enter PO" oninput="parseInt(this.value)"
+                              valdata="" autocomplete="off" /></div>
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+                        <div class="col-5 col-m-5"><label class="searchRepairLbl">Sales #</label></div>
+                        <div class="col-7 col-m-7"><input type="tel" name="sku" value="" class="txtSalesNum focus_cls w90"
+                              maxlength="11" pattern="\d*" step="1" disabled placeholder="Enter Sales" valdata=""
+                              autocomplete="off" /></div>
+                     </div>
+                  </div>
+                  <div class="col-12 col-m-12">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label class="searchRepairLbl">Source Location</label></div>
+                        <div class="col-7 col-m-7"><input type="tel" name="LOC" value="" class="txtSourceLoc focus_cls w654"
+                              maxlength="3" step="1" pattern="^[0-9]" inputmode='numeric' disabled placeholder="Enter SourceLoc"
+                              valdata="" autocomplete="off" /></div>
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+                        <div class="col-5 col-m-5"><label class="searchRepairLbl">Suffix</label></div>
+                        <div class="col-7 col-m-7"><input type="tel" name="sfx" value="" class="txtSuffixO focus_cls w90"
+                              maxlength="5" pattern="^[0-9]" step="1" disabled placeholder="Enter Suffix" valdata=""
+                              autocomplete="off" /></div>
+                     </div>
+                  </div>
+               </div>
+               <!--form table-->
+            </div>
+            <div class="shopTable col-12 col-m-12 createRepairShopTable">
+               <div class="shopHeader">
+                  <div class="col-1 col-m-1">Select</div>
+                  <div class="col-1 col-m-1">Qty</div>
+                  <div class="col-2 col-m-2">Minutes</div>
+                  <div class="col-5 col-m-5 leftClass">Repair Description</div>
+                  <div class="col-3 col-m-3">Action</div>
+               </div>
+               <div class="shopTableContent createRepairTableContent"></div>
+            </div>
+         </div>
+
+         <!--END: for Create Repair Screen-->
+
+         <!--START: for Search Repair Screen-->
+         <!--search repair new layout-------------------->
+         <div class="searchRepairScreen hide">
+
+            <div class="tabContent">
+               <div class="searchRepairDetail ">
+
+                  <div class="col-12 col-m-12 searchRepairRow">
+                     <div class="col-6 col-m-6">
+                        <div class="col-5 col-m-5 leftClass">
+                           <label class="searchRepairLbl">SKU#</label>
+                        </div>
+                        <div class="col-7 col-m-7 leftClass">
+                           <input type="tel" class="txtSearchRepairSKU common w70" maxlength="6" pattern="\d*" step="1"
+                              placeholder="Enter SKU" autocomplete="off">
+                           <img src="../public/Images/ic-barcode.png" class="imgBarCode bcSR" kahan-se="search"
+                              kaunsa-type="sku" data-for="txtSearchRepairSKU" />
+                        </div>
+                     </div>
+                     <div class="col-6 col-m-6 padsLeft">
+                        <div class="col-5 col-m-5 leftClass ">
+                           <label class="searchRepairLbl">Date</label>
+                        </div>
+                        <div class="col-7 col-m-7 leftClass">
+                           <!-- <input type="text" id="datepicker" placeholder="mm/dd/yyyy" disabled="disabled" value=""></input> -->
+                           <input type="text" id="datepicker" placeholder="mm/dd/yyyy" value=""></input>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-12 col-m-12 searchRepairRow">
+                     <div class="col-6 col-m-6">
+                        <div class="col-5 col-m-5 leftClass ">
+                           <label class="searchRepairLbl">Repair#</label>
+                        </div>
+                        <div class="col-7 col-m-7">
+                           <input type="tel" min="0" class="txtSearchRepairRepairNum common w70" maxlength="9" pattern="\d*"
+                              step="1" placeholder="Enter Repair #" value="" autocomplete="off" />
+                           <img src="../public/Images/ic-barcode.png" class="imgBarCode bcSR" kahan-se="search"
+                              kaunsa-type="repair" data-for="txtSearchRepairRepairNum" />
+                        </div>
+                     </div>
+                     <div class="col-6 col-m-6 padsLeft">
+                        <div class="col-5 col-m-5 leftClass">
+                           <label class="searchRepairLbl">Repair Status</label>
+                        </div>
+                        <div class="col-7 col-m-7">
+                           <!--<select class="slctStatus w70"  disabled="disabled"></select>-->
+                           <label class="status-select-box " id="statusSelectLbl" valcode="0">Select</label>
+                           <!-- <label class="status-select-box bshadowOut" id="statusSelectLbl" disabled valcode="0">Select</label> -->
+                           <div class="statusMianDiv hide" id="testsd">
+                              <div class="slctStatus statusContentDiv">
+
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-12 col-m-12 searchRepairRow">
+                     <div class="col-6 col-m-6">
+                        <div class="col-5 col-m-5 leftClass">
+                           <label class="searchRepairLbl">Repair Person</label>
+                        </div>
+                        <div class="col-7 col-m-7">
+                           <label class="cust-select-box focus_cls" id="rPersonPopupInputSR" valcode="" style="white-space:nowrap"
+                              repairpersonid="0">Select Repair Person</label>
+                           <!-- <label class="cust-select-box focus_cls bshadowOut" id="rPersonPopupInputSR" valcode="" style="white-space:nowrap" disabled repairpersonid="0">Select Repair Person</label> -->
+                           <div class="repairPersonsMainDivSR hide">
+                              <div class="repairPersonsTxtDiv">
+                                 <input type='text' id='repairPersoninputSR' class="repairPersoninput" repairPersonID=''
+                                    placeholder='Select Repair Person' autocomplete="off" />
+                              </div>
+                              <!--<button class="close" id="btnCloseAlert">X</button>-->
+                              <div id="repairPersonsDivSR">
+
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-6 col-m-6">
+                        <button value="Search" class="btnSearch">Search <i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                        <button value="Clear All" class="btnClearAll">Clear All <i class="fa fa-remove" aria-hidden="true"></i></button>
+                     </div>
+                  </div>
+
+               </div>
+
+            </div>
+
+            <div class="shopTable col-12 col-m-12 searchRepairShopTable">
+               <div class="shopHeader">
+                  <div class="leftClass col-m-2 col-2 ">Repair#</div>
+                  <div class="leftClass col-m-3 col-3 ">Date Time</div>
+                  <div class="col-m-5 col-5 leftClass">SKU Details</div>
+                  <div class="col-m-2 col-2 leftClass">Status</div>
+               </div>
+               <div class="shopTableContent searchTableContent">
+               </div>
+            </div>
+         </div>
+         <!--END: for Search Repair Screen-->
+
+         <!--START: for Repair Detail Screen            -->
+         <div class="repairDetailScreen hide">
+            <div class="tabContent">
+               <div class="skuDetail repairDetail">
+
+                  <div class="col-12 col-m-12 ">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label>Location</label></div>
+                        <div class="col-7 col-m-7"><strong><label class="lblLocationData pLeft"></label></strong></div>
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+                        <div class="col-4 col-m-4"><label>Date</label></div>
+                        <div class="col-8 col-m-8"><strong><label class="lblRepairDate"></label></strong></div>
+                     </div>
+                  </div>
+
+                  <div class="col-12 col-m-12 hide sRScreenOnly">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label>Repair #</label></div>
+                        <div class="col-7 col-m-7"><strong><label class="lblRepairNumRD pLeft"></label></strong></div>
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+                        <div class="col-4 col-m-4"><label>Status</label></div>
+                        <div class="col-8 col-m-8"><strong><label class="lblStatusRD" code=""></label></strong></div>
+                     </div>
+                  </div>
+
+                  <div class="col-12 col-m-12 hide sRScreenOnly">
+                     <div class="col-3 col-m-3 wadjust"><label>SKU #</label></div>
+                     <div class="col-9 col-m-9"><strong><label class="lblSkuNumRD pLeft" sku=""></label></strong></div>
+                  </div>
+
+                  <div class="col-12 col-m-12 cRScreenOnly">
+                     <div class="col-3 col-m-3 wadjust"><label>SKU # <strong><span class="comCode"></span></strong></label></div>
+                     <div class="col-9 col-m-9"><strong><label class="lblSKU" sku=""></label></strong></div>
+
+                  </div>
+                  <div class="col-12 col-m-12 cRScreenOnly">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label class="searchRepairLbl">Minutes</label></div>
+                        <div class="col-7 col-m-7"><strong><label class="lblMinutes searchRepairLbl pLeft"></label></strong>
+                        </div>
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+                        <div class="col-4 col-m-4"><label class="searchRepairLbl">Person</label></div>
+                        <div class="col-8 col-m-8"><strong><label class="lblRepairPersonCD searchRepairLbl" rpID=""></label></strong>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div class="col-12 col-m-12 hide sRScreenOnly">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label>Minutes</label></div>
+                        <div class="col-7 col-m-7"><strong><label class="lblMinutesRD pLeft"></label></strong></div>
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+                        <div class="col-4 col-m-4"><label>Person</label></div>
+                        <div class="col-8 col-m-8"><strong><label class="lblRepairPersonSD" rpID=""></label></strong></div>
+                     </div>
+                  </div>
+
+                  <div class="col-12 col-m-12 ">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label># of Pieces</label></div>
+                        <div class="col-7 col-m-7"><strong><label class="lblPieceCount pLeft"></label></strong></div>
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+                        <div class="col-4 col-m-4"><label>ItemType</label></div>
+                        <div class="col-8 col-m-8">
+                           <strong><label class="lblRewrapItem" itemRewrap="" checked="checked"></label></strong>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-12 col-m-12 ">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label>PO# </label></div>
+                        <div class="col-7 col-m-7"><strong><label class="lblPurchaseOrders pLeft"></label></strong></div>
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+                        <div class="col-4 col-m-4"><label>Sales #</label></div>
+                        <div class="col-8 col-m-8"><strong><label class="lblSales"></label></strong></div>
+                     </div>
+                  </div>
+
+                  <div class="col-12 col-m-12 ">
+                     <div class="col-7 col-m-7 fl">
+                        <div class="col-5 col-m-5"><label>Source Location</label></div>
+                        <div class="col-7 col-m-7"><strong><label class="lblSourceLoc pLeft"></label></strong></div>
+                     </div>
+                     <div class="col-5 col-m-5 fl">
+                        <div class="col-4 col-m-4"><label>Suffix</label></div>
+                        <div class="col-8 col-m-8"><strong><label class="lblSuffix"></label></strong></div>
+                     </div>
+                  </div>
+               </div>
+               <!--form table-->
+               <div class="shopTable col-12 col-m-12 repairDetailShopTable">
+                  <div class="shopHeader">
+                     <div class="col-3 col-m-3 cntrClass ">Quantity</div>
+                     <div class="col-3 col-m-3 leftClass">Minutes</div>
+                     <div class="col-6 col-m-6 leftClass">Repair Description</div>
+                  </div>
+                  <div class="shopTableContent repairDetailsContent"></div>
+               </div>
+
+               <!--form detail end-->
+            </div>
+
+            <div class="captureImageDiv col-12 col-m-12">
+               <div class="col-3 col-m-3">
+                  <span class="cptImgSpan">CAPTURE IMAGE</span>
+               </div>
+               <div class="col-9 col-m-9">
+                  <button class="btnImageCapture">CAPTURE
+                     <i class="fa fa-camera" aria-hidden="true"></i>
+                  </button>
+               </div>
+            </div>
+            <div class="col-3 col-m-3 brdr">
+            </div>
+            <div class="col-9 col-m-9 captureImageDetails">
+               <div class="imgcptheader col-12 col-m-12">
+                  <div class="col-9 col-m-9 pdLeft2">
+                     Image Capture File
+                  </div>
+                  <div class="col-3 col-m-3 txtCnt">
+                     Actions
+                  </div>
+               </div>
+               <div class="imgcptbody col-12 col-m-12">
+               </div>
+            </div>
+         </div>
+         <!--END: for Repair Detail Screen-->
+
+         <!--form detail end-->
+      </div>
+      <div class="col-12 col-m-12 groupEvents hide">
+         <div class="col-2 col-m-2">
+            <button value="Back" class="btnBack displayNone"><i class="fa fa-hand-o-left colrDat" aria-hidden="true"></i>
+               BACK</button>
+         </div>
+         <div class="col-3 col-m-3">
+               <button value="DiscardChanges" class="btnDiscardChanges displayNone fRight"><i class="fa fa-recycle colrDat"
+                  aria-hidden="true"></i>
+               DISCARD</button>
+         </div>
+         <div class="col-3 col-m-3">
+               <button value="Cancel" class="btnCancelRepair displayNone">CANCEL REPAIR <i class="fa fa-times-circle-o fa-1x"
+                  aria-hidden="true"></i> </button>
+         </div>
+         <!-- <div class="col-5 col-m-5">           
+            
+         </div> -->
+         <div class="col-4 col-m-4 pull-right">
+            <button value="NEXT" class="btnCreateNext displayNone" currentPage="CREATE" disabled="disabled">NEXT <i
+                  class="fa fa-hand-o-right colrDat" aria-hidden="true"></i></button>
+            <button value="UPDATE REPAIR/UPLOAD IMAGE" class="btnUpload displayNone floatRight"> UPDATE
+               REPAIR / <i class="fa fa-upload" aria-hidden="true"></i>UPLOAD IMAGE</button>
+         </div>
+
+
+
+
+
+      </div>
+      <div id="alertModal" class="modalWindow">
+         <div class="modalDiv">
+            <div class="modalHeader">
+               <strong><label class="modalHeaderText">Information<img src="../public/Images/information.png" class="exclamationImg"></img></label>
+               </strong>
+               <!-- <button class="close" id="btnCloseAlert">X</button> -->
+            </div>
+            <div class="modalContent">
+               <p class="pmodalText"></p>
+            </div>
+            <div class="modalFooter">
+               <button class="ok" id="btnokAlert" from="">OK</button>
+               <div class="clear"></div>
+            </div>
+         </div>
+      </div>
+      <div id="informationModal" class="modalWindow">
+         <div class="modalDiv">
+            <div class="modalHeader">
+               <strong><label class="modalHeaderText">Information<img src="../public/Images/information.png" class="infoImg"></img></label></strong>
+               <!-- <button class="close" id="btnCloseAlert">X</button> -->
+            </div>
+            <div class="modalContent">
+               <p class="pmodalText"></p>
+            </div>
+            <div class="modalFooter">
+               <div class="clear"></div>
+            </div>
+         </div>
+      </div>
+      <div id="confirmModal" class="modalWindow">
+         <div class="modalDiv">
+            <div class="modalHeader">
+               <strong><label class="modalHeaderText">Confirmation<img src="../public/Images/question.png" class="questionImg"></img></label></strong>
+               <!-- <button class="close" id="btnCloseConfirm">X</button> -->
+            </div>
+            <div class="modalContent">
+               <p class="pmodalText"></p>
+            </div>
+            <div class="modalFooter">
+               <button class="ok" id="btnokConfirm">OK</button>
+               <button class="cancel" id="btnCancelConfirm">CANCEL</button>
+               <div class="clear"></div>
+            </div>
+         </div>
+      </div>
+
+      <div id="discardConfirmModal" class="modalWindow">
+         <div class="modalDiv">
+            <div class="modalHeader">
+               <strong><label class="modalHeaderText">Confirmation<img src="../public/Images/question.png" class="questionImg"></img></label></strong>
+               <!-- <button class="close" id="btnCloseConfirm">X</button> -->
+            </div>
+            <div class="modalContent">
+               <p class="pmodalText"></p>
+            </div>
+            <div class="modalFooter">
+               <button class="ok" id="btnDiscardOKConfirm">OK</button>
+               <button class="cancel" id="btnDiscardCancelConfirm">CANCEL</button>
+               <div class="clear"></div>
+            </div>
+         </div>
+      </div>
+      <div id="cancelconfirmModal" class="modalWindow">
+         <div class="modalDiv">
+            <div class="modalHeader">
+               <strong><label class="modalHeaderText">Cancel Confirmation<img src="../public/Images/error.png" class="cancelImg"></img></label></strong>
+               <!-- <button class="close" id="btnCloseConfirm">X</button> -->
+            </div>
+            <div class="modalContent">
+               <p class="pmodalText cancelText">
+               </p>
+               <div class="cancelReasonsdiv hide col-12 col-m-12">
+                  <div class="col-5 col-m-5 pad5">REASONS</div>
+                  <div class="col-7 col-m-7">
+                     <select class="slctCancelReasons">
+                     </select>
+                  </div>
+               </div>
+            </div>
+            <div class="modalFooter">
+               <button class="ok hide" id="btnConfirmCancelRepairConfirm">CONFIRM</button>
+               <button class="ok" id="btnyesRepairConfirm">YES</button>
+               <button class="cancel" id="btnnoCancelRepairConfirm">NO</button>
+               <div class="clear"></div>
+            </div>
+         </div>
+      </div>
+      <div id="alertModalError" class="modalWindow">
+         <div class="modalDiv">
+            <div class="modalHeader">
+               <strong><label class="modalHeaderText">Error<img src="../public/Images/exclamation.png" class="exclamationImg"></img></label>
+               </strong>
+               <!-- <button class="close" id="btnCloseAlert">X</button> -->
+            </div>
+            <div class="modalContent">
+               <p class="pmodalText"></p>
+            </div>
+            <div class="modalFooter">
+               <button class="ok" id="btnokAlertError">OK</button>
+               <div class="clear"></div>
+            </div>
+         </div>
+      </div>
+      <div class="buttonload hide">
+         <i class="fa fa-spinner fa-spin"></i><span class="loadingBar">Loading</span>
+      </div>
+      <div class="updateLoading  hide">
+         <img src="../public/Images/updateLoading.gif" class="uploadImg"></img>
+      </div>
+      <div class="uploadLoading  hide">
+         <img src="../public/Images/uploadUpdate.gif" class="uploadImg"></img>
+      </div>
+      <div class="circle-loader hide">
+         <img src="../public/Images/circle-loader.gif" class="uploadImg"></img>
+      </div>
+      <form action="" style="display:none;" class="UploadFileForm" method="post" enctype="multipart/form-data">
+      </form>
+   </div>
+   <div class="divoverlay"></div>
+
+   <div class="divoverlayNew"></div>
+
+   <div class="modalWindow" id="invalidAppLoader">     
+         <div class="modalDiv">
+            <div class="modalHeader">
+               <strong><label class="modalHeaderText">Information<img src="../public/Images/information.png" class="exclamationImg"></img></label>
+               </strong>
+               <!-- <button class="close" id="btnCloseAlert">X</button> -->
+            </div>
+            <div class="modalContent">
+               <p class="pmodalText"></p>
+            </div>
+            <div class="modalFooter">
+               <button class="ok" id="btnokInvalidApp" from="">OK</button>
+               <div class="clear"></div>
+            </div>
+         </div>     
+   </div>
+   <div class="modalWindow" id="invalidAppLoaderLocReload">     
+      <div class="modalDiv">
+         <div class="modalHeader">
+            <strong><label class="modalHeaderText">Information<img src="../public/Images/information.png" class="exclamationImg"></img></label>
+            </strong>
+            <!-- <button class="close" id="btnCloseAlert">X</button> -->
+         </div>
+         <div class="modalContent">
+            <p class="pmodalText"></p>
+         </div>
+         <div class="modalFooter">
+            <button class="ok" id="btnokInvalidAppLocReload" from="">OK</button>
+            <div class="clear"></div>
+         </div>
+      </div>     
+</div>
+   <div class="loader hide">
+      <div class="circle-loader">
+         <!-- <img src="../public/Images/circle-loader.gif" class="uploadImg"></img> -->
+      </div>
+   </div>
+   <!--FOR CR to SR/SR to CR/ SR1 to SR-->
+   <input type="hidden" id="crsrsr1" current="create" to="" />
+
+   <!--FOR SR1 to RD and CR to RD-->
+   <input type="hidden" id="crrdsr1rd" current="create" to="" />
+
+   <!--FOR RD to SR1 / RD to CR / SR1 to SR-->
+   <input type="hidden" id="rdsr1rdcrsr1sr" to="" />
+
+
+   <!--is SR1-->
+   <input type="hidden" id="isSR1" stat="false" />
+
+   <!--FOR CLICK TYPE .. it will have 3 values. RADIOGROUP/NEXT/BACK-->
+   <input type="hidden" id="clicktype" clicktype="" />
+
+   <input type="text" class="hdnCalss hide" />
+   <script src="./public/Script/jQuery/jQuery.js"></script>
+   <script src="./public/Script/Common/script.js"></script>
+   <script src="./public/Script/Main/Script.js"></script>
+   <script src="./public/Script/Main/CreateRepair/script.js"></script>
+   <script src="./public/Script/Main/SearchRepair/script.js"></script>
+   <script src="./public/Script/Main/RepairDetails/script.js"></script>
+   <script src="./public/Script/Main/Dialog/dialog.js"></script>
+   <script src="./public/Script/Main/AutoComplete/autocomplete.js"></script>
+   <script src="./public/Script/Common/RepairDetails.js"></script>
+   <script src="./public/Script/Common/CreateRepair.js"></script>
+   <script src="./public/Script/Common/SearchRepair.js"></script>
+   <script src="./public/Script/Common/validation.js"></script>
+   <script src="./public/Script/Common/uploadDrive.js"></script>
+   <script src="./public/Script/datePicker/datepicker.js"></script>
+</body>
+
+</html>

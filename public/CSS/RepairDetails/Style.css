@@ -1,0 +1,76 @@
+.repairDetailsSelected{
+ /* height: 650px;
+  border: 1px solid grey;*/
+  border: 1px solid #d4d4d1;
+  background-color: #fff;
+  float: left;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.repairDetailsContent{
+  height: 180px !important;
+  border-bottom: 1px solid grey;
+}
+.captureImageDetails{
+  border:1px solid #c7c6c6;
+  height: 170px;
+  margin-top: 5px;
+}
+
+.btnImageCapture{
+  float: left !important;
+    margin-left: 7px;
+    padding: 10px 5px !important;
+}
+
+
+/* .captureImageDiv{
+    margin-top: 10px !important;
+} */
+
+.cptImgSpan{
+    font-size: 1.1em;
+}
+
+.brdr{
+  border-top:   1px solid white;
+  border-right: none;
+  border-bottom:  1px solid white;
+  border-left:   1px solid white;
+}
+
+
+.imgcptheader{
+    font-size: 1em !important;
+    font-weight: normal;
+    padding: 0.5em 0.1em !important;
+    border-bottom: 1px solid grey;
+    color: #fff;
+    background: #696969;
+}
+
+.imgcptbody{
+  height: 132px;
+  overflow: auto;
+  display: block;
+  position: relative;
+}
+.pad5{
+  padding: 0.5em !important;
+}
+
+.pad3{
+  padding: 0.3em !important;
+}
+
+.brdrBtm{
+  border: 1px solid grey;
+}
+
+.txtCnt{
+  text-align: center;
+}
+
+.pdLeft2{
+  padding-left: 2em;
+}

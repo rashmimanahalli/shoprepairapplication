@@ -1,0 +1,240 @@
+.modalWindow {
+    /* position: fixed;
+    position:fixed;
+    top: 45%;
+    left: 50%;
+    width:30em;
+    height:28em;
+    margin-top: -9em; 
+    margin-left: -15em; 
+    z-index: 99999;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in; */
+    display: none;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    position: fixed;
+    padding-top: 10%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modalHeader h2 {
+    color: white;
+    font-size: 1.5em;
+}
+
+.modalWindow:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalWindow>div {
+    width: 325px;
+    position: relative;
+    margin: 10% auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.modalWindow .modalHeader {
+    /*padding: 2px 20px 2px 20px;
+  	background-color: darkgrey;*/
+    /* border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid lightgray;
+    padding: 1em 0 1em 1em; */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid lightgray;
+    padding: 0.5em 0 0.5em 0.5em;
+    vertical-align: text-bottom;
+    background: #f3f1f1;
+}
+
+.modalWindow .modalContent {
+    padding: 0.5em 0.2em 0.5em 0.5em;
+    font-size: 1em;
+    color: grey;
+    height: 80px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgray;
+}
+
+.modalWindow .modalFooter {
+    padding: 10px 2px 10px 17px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.modalFooter {
+    border-top: 1px solid lightgrey;
+}
+
+.modalFooter p {
+    color: #D4482D;
+    text-align: right;
+    margin: 0;
+    padding: 5px;
+}
+
+.ok,
+.close,
+.cancel {
+    /*  background: #606061 !important;
+    color: #FFFFFF!important;
+    line-height: 25px!important;
+    text-align: center!important;
+    text-decoration: none!important;
+    font-weight: bold!important;
+    -webkit-border-radius: 2px!important;
+    -moz-border-radius: 2px!important;
+    border-radius: 2px!important;
+    -moz-box-shadow: 1px 1px 3px #000!important;
+    -webkit-box-shadow: 1px 1px 3px #000!important;
+    box-shadow: 1px 1px 3px #000!important;*/
+
+
+    background: #FFFFFF !important;
+    color: gray;
+    line-height: 25px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+    border-radius: 2px !important;
+    -moz-box-shadow: 1px 1px 3px #000 !important;
+    /* -webkit-box-shadow: 1px 1px 3px #000!important; */
+    /* box-shadow: 1px 1px 3px #000!important; */
+}
+
+.close {
+    position: absolute;
+    right: 4px;
+    top: 3px;
+    width: 22px;
+    height: 22px;
+    font-size: 15px;
+    padding: 0;
+}
+
+.ok,
+.cancel {
+    min-width: 80px;
+    float: right !important;
+    margin-left: 11px !important;
+    height: 30px;
+    padding: 0;
+    border: 1px solid #b1aeae;
+}
+
+.ok:hover {
+    background: #189CDA !important;
+    color: white;
+}
+
+.close:hover,
+.cancel:hover {
+    background: #D4482D !important;
+    color: white;
+}
+
+.clear {
+    float: none !important;
+    clear: both !important;
+}
+
+.modalDiv {
+    border: 1px solid grey;
+    margin: 0 auto;
+    margin-top: 15%;
+}
+
+.modalHeaderText {
+    font-size: 1.6em;
+    color: #232222;
+    padding-left: 5px;
+}
+
+.pmodalText {
+    font-size: 1em;
+    /*height: 80px;*/
+    color: #545050;
+    padding: 0.2em 0 0 0.5em;
+}
+
+.cancelReasonsdiv {
+    font-size: 1em;
+    /*height: 80px;*/
+    color: #545050;
+    padding: 1em 0 0 1em;
+}
+
+.divoverlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    z-index: 1;
+    background-color: black;
+}
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    z-index: 1;
+    background-color: black;
+}
+
+.divoverlayNew {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    z-index: 1;
+    background-color: black;
+}
+
+
+.errorImg {
+    width: 28px !important;
+    float: left !important;
+}
+
+.questionImg {
+    width: 25px !important;
+    float: left !important;
+}
+
+.exclamationImg {
+    width: 28px !important;
+    float: left !important;
+}
+
+.infoImg {
+    width: 28px !important;
+    float: left !important;
+}
+
+.cancelImg {
+    width: 28px !important;
+    float: left !important;
+}

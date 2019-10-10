@@ -1,0 +1,21 @@
+{ "No Charge, Cost of Doing Business" : [
+        { "Desc"  : "Inspection  Cleaning, Assembly", "Mins" : 100 , "qty" : 5 , "REASONCODE" : 100 , "CATEGORYCODE"  : 10 },
+        { "Desc"  : "Damage - Dings (rewraps)", "Mins" : 220 , "qty" : 1 ,"REASONCODE" : 120 , "CATEGORYCODE"  : 10  },
+        { "Desc" : "Damage - Abrasion, Scratches (rewraps)", "Mins" : 700 , "qty" : 2 , "REASONCODE" : 140 , "CATEGORYCODE"  : 10  }
+      ],
+"Upholstery/Leather"  : [
+        { "Desc"  : "Damage - Rips/Tears", "Mins" : 100 , "qty" : 5 , "REASONCODE" : 100 , "CATEGORYCODE"  : 11 },
+        { "Desc"  : "Incorrect Frame/Leg Finish", "Mins" : 220 , "qty" : 1 ,"REASONCODE" : 120 , "CATEGORYCODE"  : 11  },
+        { "Desc" : "Open, Loose or Racked Frame", "Mins" : 700 , "qty" : 2 , "REASONCODE" : 140 , "CATEGORYCODE"  : 11  }
+],
+"Finish" : [
+         { "Desc"  : "Crazing/Blushing/Orange Peels/Fisheyes", "Mins" : 100 , "qty" : 5 , "REASONCODE" : 100 , "CATEGORYCODE"  : 12 },
+        { "Desc"  : "Excessive Fill/Noticable Repair", "Mins" : 220 , "qty" : 1 ,"REASONCODE" : 120 , "CATEGORYCODE"  : 12  },
+        { "Desc" : "Uneven Finish/Unfinished/Peeling", "Mins" : 700 , "qty" : 2 , "REASONCODE" : 140 , "CATEGORYCODE"  : 12  }
+      ],
+"Construction" : [
+        { "Desc"  : "Out of Square/Not Level", "Mins" : 100 , "qty" : 5 , "REASONCODE" : 100 , "CATEGORYCODE"  : 13 },
+        { "Desc"  : "Misaligned Borings for Fasteners", "Mins" : 220 , "qty" : 1 ,"REASONCODE" : 120 , "CATEGORYCODE"  : 13  },
+        { "Desc" : "Doors or Drawers Rubbing/Mis-set", "Mins" : 700 , "qty" : 2 , "REASONCODE" : 140 , "CATEGORYCODE"  : 13  }
+      ]
+}
